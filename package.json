@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "gitbook-plugin-emqx": "^1.0.5",
+    "gitbook-plugin-emqx-docs": "^0.0.12",
+    "jimp": "^0.16.1",
+    "svgexport": "^0.4.1"
+  }
+}
