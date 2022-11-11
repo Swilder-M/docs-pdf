@@ -1,0 +1,28 @@
+name: Gen Pdf Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  gen:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: clone docs
+      uses: actions/checkout@v3
+
+    - name: install software
+      run: |
+        python -m pip install --upgrade pipenv wheel
+        apt-get install wkhtmltopdf -y
+        pipenv install --keep-outdated
+
+    - name: gen pdf
+      run: |
+        pipenv run python vuepress-to-pdf.py
+
+    - name: upload pdf
+      uses: actions/upload-artifact@v2
+      with:
+          name: pdf
+          path: ./*.pdf
+  
