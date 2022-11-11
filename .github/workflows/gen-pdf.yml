@@ -22,7 +22,8 @@ jobs:
         sudo apt-get install xvfb
         which wkhtmltopdf
         sudo mv /usr/local/bin/wkhtmltopdf /usr/local/bin/wkhtmltopdf_bin
-        sudo chmod +x ./wkhtmltopdf.sh sudo ln -s ./wkhtmltopdf.sh /usr/local/bin/wkhtmltopdf
+        sudo chmod +x ./wkhtmltopdf.sh
+        sudo ln -s ./wkhtmltopdf.sh /usr/local/bin/wkhtmltopdf
 
     - name: gen pdf
       run: |
