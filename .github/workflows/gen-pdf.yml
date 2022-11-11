@@ -17,6 +17,13 @@ jobs:
         python -m pip install --upgrade pipenv wheel
         pipenv install --keep-outdated
 
+    - name: fix xvfb
+      run: |
+        sudo apt-get install xvfb
+        echo which wkhtmltopdf
+        sudo mv /usr/bin/wkhtmltopdf /usr/bin/wkhtmltopdf_bin
+        sudo chmod +x ./wkhtmltopdf.sh sudo ln -s ./wkhtmltopdf.sh /usr/bin/wkhtmltopdf
+
     - name: gen pdf
       run: |
         pipenv run python vuepress-to-pdf.py
