@@ -1,0 +1,13 @@
+
+  .navbar,
+  .right-column,
+  .header-anchor,
+  .main-footer-box {
+    display: none;
+  }
+  .main-box {
+    padding-top: 0;
+  }
+  #page-feedback {
+    display: none;
+  }
