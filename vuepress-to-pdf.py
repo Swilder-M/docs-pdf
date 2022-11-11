@@ -61,7 +61,7 @@ def gen_pdf(product, version, lang='cn'):
         'user-style-sheet': 'assets/docs.css',
         'dump-outline': 'assets/toc.xml',
         'enable-local-file-access': None,
-        'javascript-delay': 60000,
+        'javascript-delay': 6000000,
         'header-center': f'{product_display} {version_display} Docs',
         'header-font-size': 10,
         'header-spacing': 5,
