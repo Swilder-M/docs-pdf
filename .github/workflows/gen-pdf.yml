@@ -12,8 +12,9 @@ jobs:
 
     - name: install software
       run: |
+        wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.focal_amd64.deb
+        sudo dpkg -i wkhtmltox_0.12.5-1.focal_amd64.deb
         python -m pip install --upgrade pipenv wheel
-        sudo apt-get install wkhtmltopdf -y
         pipenv install --keep-outdated
 
     - name: gen pdf
@@ -25,4 +26,3 @@ jobs:
       with:
           name: pdf
           path: ./*.pdf
-  
